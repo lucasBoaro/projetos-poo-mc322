@@ -12,11 +12,10 @@ public class Ambiente {
 	}
 	
 	public boolean dentroDosLimites(int x, int y) {
-		if((x<=larguraX && y<=alturaY) || (x<=0 && y>=0)) {
-			return true;
-		}
 		
-		return false;
+		return ((x<=larguraX && y<=alturaY) || (x<=0 && y>=0)) ;
+			
 		
 	}
 }
+

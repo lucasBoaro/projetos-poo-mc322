@@ -19,7 +19,7 @@ public class Robo {
 	}
 	
 	public void exibirPosicao() {
-		System.out.printf("%d,%d",posicaoX,posicaoY);
+		System.out.printf("%s: (%d,%d)\n",nome,posicaoX,posicaoY);
 	}
 	
 }
