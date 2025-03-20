@@ -22,6 +22,7 @@ public class Robo {
     }
     public void identificarObstaculo(){
 
+
     }
 
     public void exibirPosicao() {
