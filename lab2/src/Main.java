@@ -48,6 +48,9 @@ public class Main {
         robo7.HabilitarTurbo();
         robo7.Mover(10,10,robo7.nome);
 
+        for(int i = 0; i< Ambiente.contadorRobo; i++) {
+            ambiente1.dentroDosLimites(ambiente1.arrayRobo[i].posicaoX,ambiente1.arrayRobo[i].posicaoY,ambiente1.arrayRobo[i].nome);
+        }
         ambiente1.dentroDosLimites(robo1.posicaoX, robo1.posicaoY,robo1.nome);
         ambiente1.dentroDosLimites(robo2.posicaoX, robo2.posicaoY,robo2.nome);
         ambiente1.dentroDosLimites(robo3.posicaoX, robo3.posicaoY,robo3.nome);
@@ -55,6 +58,8 @@ public class Main {
         ambiente1.dentroDosLimites(robo5.posicaoX, robo5.posicaoY,robo5.nome);
         ambiente1.dentroDosLimites(robo6.posicaoX, robo6.posicaoY,robo6.nome);
         ambiente1.dentroDosLimites(robo7.posicaoX, robo7.posicaoY,robo7.nome);
+
+
 
 
         robo1.exibirPosicao();

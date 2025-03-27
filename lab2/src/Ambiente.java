@@ -6,7 +6,7 @@ public class Ambiente {
     int alturaY;
     Robo[][] matrizAmbiente = new Robo[100][100];
     Robo[] arrayRobo = new Robo[10];
-    static int contadorRobo=0;
+    static int contadorRobo=0; //static diz que o valor desse atributo é da classe, e não só de uma instancia especifica
 
     public Ambiente(int larguraX, int alturaY) {
         this.larguraX=larguraX;
@@ -30,6 +30,7 @@ public class Ambiente {
 
     public void adicionarRobo(Robo robo){ //add robo na lista de robos
         arrayRobo[contadorRobo]=robo;
+        adicionarNaMatriz(robo);
         contadorRobo++;
     }
     public boolean dentroDaAltura(int alturaMaxima, int altura, String nome){ // verifica se o movimento de subir/descer não vai infrigir as regras
@@ -42,8 +43,8 @@ public class Ambiente {
             return true;
         }
     }
-    public void adicionarNaMatriz(int x, int y, Robo robo){
-        matrizAmbiente[x][y]=robo;
+    public void adicionarNaMatriz(Robo robo){
+        matrizAmbiente[robo.posicaoX][robo.posicaoY]=robo;
     }
 
     public void identificarObstaculo(int i, int j){
